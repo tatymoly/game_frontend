@@ -22,15 +22,6 @@ $ npm start
 
 go to [http://localhost:8080](http://localhost:8080) in your browser.
 
-# Table of Contents
-
-* [Getting Started](#getting-started)
-    * [Dependencies](#dependencies)
-    * [Installing](#installing)
-    * [Running the app](#running-the-app)
-    * [Developing](#developing)
-    * [Testing](#testing)
-* [License](#license)
 
 # Getting Started
 

@@ -12,10 +12,23 @@
     </tr>
   </table>
   <div style="width: 100%">
-      <h3 class="title">To play please type a number between 1 and 100</h3> 
-      <form novalidate action="POST">
+      <h3 class="title">To play please type a number between 1 and 100</h3>
+      <table style="width:50%; text-align: center; margin-left: 25%">
+        <tr>
+          <th>Computer</th>
+          <th>Result</th>
+          <th>Random Number</th>
+        </tr>
+        <tr ng-repeat="c in computer">
+          <th>{{ c.cpu_number }}</th>
+          <th>{{ c.result }}</th>
+          <th>{{ c.random_number }}</th>
+        </tr>
+      </table>
+      <form style="margin-top: 30px;">
         <label>Number: <input type="text" ng-model="user_number" /></label><br />
-        <input style="margin-top: 30px; width: 100px" type="submit" ng-click="send(user_number)" value="Play" />
+        <button style="margin-top: 30px; width: 100px" type="submit" ng-click="send(user_number)">Play</button>
+        <p ng-if="error" style="color: red">Please type a number between 1 and 100</p>
       </form>
   </div>
 </main>
