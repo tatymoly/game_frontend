@@ -1,0 +1,21 @@
+<main>
+  <table style="width:50%; text-align: center; margin-left: 25%">
+    <tr>
+      <th>Wins</th>
+      <th>Loses</th>
+      <th>Ties</th>
+    </tr>
+    <tr ng-repeat="x in score">
+      <th>{{ x.wins_count }}</th>
+      <th>{{ x.lose_count }}</th>
+      <th>{{ x.ties_count }}</th>
+    </tr>
+  </table>
+  <div style="width: 100%">
+      <h3 class="title">To play please type a number between 1 and 100</h3> 
+      <form novalidate action="POST">
+        <label>Number: <input type="text" ng-model="user_number" /></label><br />
+        <input style="margin-top: 30px; width: 100px" type="submit" ng-click="send(user_number)" value="Play" />
+      </form>
+  </div>
+</main>
