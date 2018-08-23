@@ -23,7 +23,7 @@ angular.module(TAKE_HOME_TEST, [])
   .controller('AppCtrl', ($scope, $http) =>{
     $http({
       method: 'GET',
-      url: 'http://localhost:3000/games'
+      url: 'https://take-home-programming-assignme.herokuapp.com/games'
     }).then((data) => {
       if(data.status === 200){
         $scope.score = data;
@@ -42,7 +42,7 @@ angular.module(TAKE_HOME_TEST, [])
       console.log($scope.user_number)
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/games?user_number=' + $scope.user_number,
+        url: 'https://take-home-programming-assignme.herokuapp.com/games?user_number=' + $scope.user_number,
         data:'',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -53,7 +53,7 @@ angular.module(TAKE_HOME_TEST, [])
           console.log(data)
           $http({
             method: 'GET',
-            url: 'http://localhost:3000/games'
+            url: 'https://take-home-programming-assignme.herokuapp.com/games'
           }).then((data) => {
             if(data.status === 200){
               $scope.score = data;
